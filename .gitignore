@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
 
 # Private/local material. Do not publish real manuscripts or saved Overleaf pages.
 Init/
@@ -13,7 +17,7 @@ private_*
 overleaf_comments_extracted.*
 examples/fake_overleaf_save.zip
 examples/fake_comments*
-*_comments.tex
+*_comments*.tex
 
 # LaTeX build artifacts
 *.aux

@@ -1,15 +1,39 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "extract-overleaf-comments"
 version = "0.1.0"
-description = "Extract visible comments from Chrome-saved Overleaf HTML archives."
+description = "Extract visible Overleaf comments from saved browser snapshots."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "Antoine Lucas" }]
+keywords = ["overleaf", "latex", "comments", "review", "cli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Markup :: LaTeX",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/adakite/extract-overleaf-comments"
+Repository = "https://github.com/adakite/extract-overleaf-comments"
+Issues = "https://github.com/adakite/extract-overleaf-comments/issues"
+
+[project.optional-dependencies]
+test = ["pytest"]
 
 [project.scripts]
 extract-overleaf-comments = "overleaf_comment_extractor:main"

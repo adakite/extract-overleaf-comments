@@ -10,8 +10,31 @@ downloaded LaTeX source archive.
 
 The extractor uses only the Python standard library.
 
+From PyPI, once released:
+
 ```bash
-python3 src/overleaf_comment_extractor.py --help
+pip install extract-overleaf-comments
+```
+
+From a local checkout:
+
+```bash
+python3 -m pip install .
+```
+
+Then run:
+
+```bash
+extract-overleaf-comments --help
+```
+
+## Development
+
+```bash
+python3 -m pip install -e ".[test]"
+python3 -m pytest tests
+python3 -m build
+python3 -m twine check dist/*
 ```
 
 ## Usage
@@ -78,6 +101,24 @@ python3 src/overleaf_comment_extractor.py examples/fake_overleaf_save.zip \
   --tex examples/fake_project.tex \
   --out-prefix examples/fake_comments \
   --comment-tex examples/fake_project_comments.tex
+```
+
+## Release
+
+PyPI publishing is configured through GitHub Actions Trusted Publishing. To
+publish a release:
+
+1. Create a pending publisher on PyPI for:
+   - PyPI project: `extract-overleaf-comments`
+   - Owner: `adakite`
+   - Repository: `extract-overleaf-comments`
+   - Workflow: `publish-pypi.yml`
+   - Environment: `pypi`
+2. Tag a version and push the tag:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
 ```
 
 ## Limitations
