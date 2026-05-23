@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "extract-overleaf-comments"
+version = "0.1.0"
+description = "Extract visible comments from Chrome-saved Overleaf HTML archives."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Antoine Lucas" }]
+
+[project.scripts]
+extract-overleaf-comments = "overleaf_comment_extractor:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = ["overleaf_comment_extractor"]
