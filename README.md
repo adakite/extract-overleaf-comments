@@ -105,21 +105,9 @@ python3 src/overleaf_comment_extractor.py examples/fake_overleaf_save.zip \
 
 ## Release
 
-PyPI publishing is configured through GitHub Actions Trusted Publishing. To
-publish a release:
+PyPI publishing was configured through GitHub Actions Trusted Publishing. 
 
-1. Create a pending publisher on PyPI for:
-   - PyPI project: `extract-overleaf-comments`
-   - Owner: `adakite`
-   - Repository: `extract-overleaf-comments`
-   - Workflow: `publish-pypi.yml`
-   - Environment: `pypi`
-2. Tag a version and push the tag:
 
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
 
 ## Limitations
 
